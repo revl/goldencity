@@ -1,0 +1,20 @@
+{
+  "name": "goldencity",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach --all --parallel run dev",
+    "build": "yarn workspaces foreach --all run build",
+    "lint": "yarn workspaces foreach --all --parallel run lint",
+    "typecheck": "yarn workspaces foreach --all --parallel run typecheck"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "yarn@4.9.2"
+}

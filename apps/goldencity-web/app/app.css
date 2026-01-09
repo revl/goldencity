@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --transition: all 0.3s ease;
+}
+
+@theme inline {
+  --font-sans:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Subdued light mode colors */
+  --color-primary: #f8f9fa;
+  --color-secondary: #e9ecef;
+  --color-accent: #6c757d;
+  --color-text: #495057;
+  --color-text-secondary: #868e96;
+  --color-border: #dee2e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme inline {
+    /* Subdued dark mode colors */
+    --color-primary: #1a1d21;
+    --color-secondary: #25282d;
+    --color-accent: #6c757d;
+    --color-text: #e9ecef;
+    --color-text-secondary: #adb5bd;
+    --color-border: #343a40;
+  }
+}
+
+@layer base {
+  html {
+    @apply bg-primary text-text;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+}

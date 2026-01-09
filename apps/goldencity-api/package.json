@@ -1,0 +1,57 @@
+{
+  "name": "@goldencity/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "API server for GoldenCity",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint",
+    "prebuild": "npm run clean"
+  },
+  "dependencies": {
+    "@goldencity/contracts": "*",
+    "@goldencity/utils-node": "*",
+    "@supabase/supabase-js": "^2.47.10",
+    "compression": "^1.7.5",
+    "cookie": "^1.0.2",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "envalid": "^8.0.0",
+    "ethers": "^6.16.0",
+    "express": "^5.0.1",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "siwe": "^2.1.6",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/compression": "^1.7.5",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cookie-session": "^2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "@vitest/coverage-v8": "^4.0.14",
+    "eslint": "^9.15.0",
+    "supabase": "^2.72.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.7.2",
+    "vitest": "^4.0.14"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
